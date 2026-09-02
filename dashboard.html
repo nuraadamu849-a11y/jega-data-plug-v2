@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JEGA DATA PLUG Dashboard</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+}
+
+.header{
+background:#d60000;
+color:white;
+padding:20px;
+}
+
+.header h2{
+margin:0;
+}
+
+.card{
+background:white;
+margin:15px;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.balance{
+font-size:28px;
+font-weight:bold;
+color:#d60000;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.btn{
+background:white;
+padding:20px;
+text-align:center;
+border-radius:12px;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.logout{
+display:block;
+margin:20px;
+background:#d60000;
+color:white;
+padding:15px;
+text-align:center;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h2>Welcome, <span id="user"></span></h2>
+</div>
+
+<div class="card">
+<p>Wallet Balance</p>
+<div class="balance">₦0.00</div>
+</div>
+
+<div class="grid">
+
+<a class="btn" href="data.html">
+📶<br>Buy Data
+</a>
+
+<a class="btn" href="airtime.html">
+📱<br>Buy Airtime
+</a>
+
+<a class="btn" href="wallet.html">
+💳<br>Fund Wallet
+</a>
+
+<a class="btn" href="transactions.html">
+📋<br>Transactions
+</a>
+
+<a class="btn" href="reseller.html">
+👥<br>Reseller
+</a>
+
+<a class="btn" href="#">
+⚙️<br>Settings
+</a>
+
+</div>
+
+<a class="logout" href="login.html">
+Logout
+</a>
+
+<script>
+document.getElementById("user").innerHTML =
+localStorage.getItem("username") || "Customer";
+</script>
+
+</body>
+</html>
