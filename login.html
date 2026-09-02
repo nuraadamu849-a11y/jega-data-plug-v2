@@ -1,1 +1,28 @@
+<script>
+function login(){
 
+let email = document.getElementById("email").value;
+let password = document.getElementById("password").value;
+
+let user = JSON.parse(localStorage.getItem("user"));
+
+if(!user){
+alert("No account found. Please register first.");
+window.location="register.html";
+return;
+}
+
+if(email===user.email && password===user.password){
+
+alert("Login Successful!");
+
+window.location="dashboard.html";
+
+}else{
+
+alert("Incorrect email or password.");
+
+}
+
+}
+</script>
